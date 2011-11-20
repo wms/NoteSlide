@@ -11,8 +11,8 @@
 <head>
 	<?php echo $this->html->charset();?>
 	<title>Application &gt; <?php echo $this->title(); ?></title>
-	<?php echo $this->html->script(array('jquery-1.7')); ?>
-	<?php echo $this->html->style(array('noteslide', 'fonts')); ?>
+	<?php echo $this->html->script(array('jquery-1.7', 'popup')); ?>
+	<?php echo $this->html->style(array('noteslide','testlogin', 'fonts')); ?>
 	<?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>
 </head>
 <body class="app">
@@ -22,7 +22,7 @@
                 <?php echo $this->html->image('ns.png'); ?>
             </div>
             <div id="loginarea">
-                FIRSTNAME LASTNAME <a href="#"><?php echo $this->html->image("drop.png"); ?></a>
+					FIRSTNAME LASTNAME <a href="#" id="loginlink">Login<a/>  <a href="#"><?php echo $this->html->image("drop.png"); ?></a>
             </div>
         </div>
         <div class="subcontainer">
@@ -38,5 +38,12 @@
 			<?php echo $this->content(); ?>
 		</div>
 	</div>
+
+<div id="loginbox">  
+        <a id="loginboxClose">x</a>  
+       
+      
+    </div>  
+    <div id="overlay"></div> 
 </body>
 </html>
