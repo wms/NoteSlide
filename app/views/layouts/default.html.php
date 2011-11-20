@@ -21,21 +21,28 @@
             <span id="ns">
                 <?php echo $this->html->image('ns.png'); ?>
             </span>
+            <span id="search"><form method="POST" name="searchform" id="topsearchform"><input name="search" id="topsearchbox" /></form></span>
             <span id="loginarea">
-					<a href="user/useridorname">FIRSTNAME LASTNAME</a> <a href="#" id="loginlink">Login</a>  <a href="#"><?php echo $this->html->image("drop.png"); ?></a>
+					<a href="user/useridorname">FIRSTNAME LASTNAME</a> <a href="#" id="loginlink">Login</a>
             </span>
         </div>
         <div class="subcontainer">
-            <div class="content">
-            <h1>Welcome to NoteSlide</h1>
-            <h3>Choose your Uni to Browse notes, or Register to add notes</h3>
-            <ul class="unilist">
-                <li><a href="#">Cardiff University</a></li>
-                <li><a href="#">Swansea University</a></li>
-            </ul>
-		<div id="content">
-            <?php echo $this->flashMessage->output() ?>
-			<?php echo $this->content(); ?>
+		<div class="content">
+		<div class="intro">
+			<div class="toptear"></div>
+			<div class="introtext">
+				<h1>Welcome to NoteSlide</h1>
+				<h3>Choose your Uni to Browse notes, or Register to add notes</h3>
+					<ul class="unilist">
+						<li><a href="#">Cardiff University</a></li>
+						<li><a href="#">Swansea University</a></li>
+					</ul>
+			</div>
+			<div class="bottomtear"></div>
+		</div>
+		<div class="posts">
+	            <?php echo $this->flashMessage->output() ?>
+				<?php echo $this->content(); ?>
 		</div>
 	</div>
 

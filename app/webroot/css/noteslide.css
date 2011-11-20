@@ -1,15 +1,4 @@
-.topmenu{
-	height: 50px;
-	background-image: url("../img/topmenubg.png");
-	padding-left: 15%;
-	padding-right: 15%;
-}
-
-.topmenu a{
-	color: #FFFFFF;
-}
-
-
+/*Start general styling*/
 body{
 	margin: 0px;
 	padding: 0px;
@@ -25,6 +14,20 @@ a{
 a:hover{
 	text-decoration: underline;
 }
+/*End general styling*/
+
+
+/*Start top menu bar styling*/
+.topmenu{
+	height: 50px;
+	background-image: url("../img/topmenubg.png");
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+.topmenu a{
+	color: #FFFFFF;
+}
 
 #ns{
 	margin-left: 10px;
@@ -33,6 +36,34 @@ a:hover{
 	float: left;
 }
 
+
+#loginarea{
+	float: right;
+	padding-right: 5px;
+	margin-top: 15px;
+	color: #FFFFFF;
+	font-family: 'Ubuntu';
+}
+
+#search{
+	width: 400px;
+	display: inline;
+	float: left;
+	margin-left: 100px;
+	margin-top: 5px;
+}
+
+#topsearchbox{
+	font-size: 28px;
+	background-color: #5C5C5C;
+	color: #FFFFFF;
+	border: 2px ridge #595959;
+	float: left;
+}
+
+/*End top menu bar styling*/
+
+/*Start University List styling*/
 .unilist{
 	list-style: none;
 	padding-left: 0;
@@ -43,27 +74,39 @@ a:hover{
 	margin-top: 3px;
 }
 
-#loginarea{
-	float: right;
-	padding-right: 5px;
-	margin-top: 15px;
-	color: #FFFFFF;
-	font-family: 'Ubuntu';
-}
+/*End University List styling*/
 
-#sidebar{
-	float: right;
-	width: 250px;
-	background-color: #00FF00;
-	height: auto;
-}
 
 .subcontainer{
-	background-color: #EEEEEE;
 	margin-left: 15%;
 	margin-right: 15%;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+}
+
+.intro{
+	/*box-shadow: 10px 10px 5px #E8E8E8;*/
+}
+
+.toptear{
+	padding: 0;
+	margin: 0;
+	height: 20px;
+	background-image:url("../img/toptear.png");
+}
+
+.introtext{
+	padding: 5px;
+	background-image:url("../img/justlines.png");
+	min-height: 200px
+}
+
+.bottomtear{
+	padding: 0;
+	margin: 0;
+	height: 21px;
+	background-image:url("../img/bottomtear.png");
+	bottom: 0px;
 }
 
 .content{
@@ -72,15 +115,11 @@ a:hover{
 	margin-bottom: 100px;
 }
 
-h1{
-	margin-top: 0px;	
-	padding: 6px 0px 0px 6px;
-}
-
+/*Start Styling of notes*/
 .note{
-	background-image:url('../img/LinedPaper.png');
-	width: 897px;
-	height: 240px;
+	background-image:url('../img/postitbg.png');
+	width: 875px;
+	height: 220px;
 	padding-left: 25px;
 	padding-top: 30px;
 }
@@ -103,4 +142,10 @@ h1{
 	font-size: 12px;
 	font-weight: 100;
 	color: #4A4A4A;
+}
+/*End styling of notes*/
+
+h1{
+	padding-top: 0px;
+	margin-top: 0px;
 }
