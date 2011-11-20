@@ -10,6 +10,7 @@
 	<dl class="note" id="<?php #note id to be echoed here ?>">
     <dt><a href="#"><?php echo $note->title ?></a><br /><em>Posted By <a href="user/usernameorid"><?php echo $note->name ?></a></em></dt>
     <dd><?php echo $note->description ?></dd>
+    <div class="actions"><a href="report/noteid">report</a> | <a href="#" onclick="note()">note</a></div>
     </dl>
 <?php endforeach ?>
 <?php else: ?>

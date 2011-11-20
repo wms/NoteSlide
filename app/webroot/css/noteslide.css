@@ -139,7 +139,7 @@ a:hover{
 	width: 875px;
 	height: 175px;
 	padding-left: 25px;
-	padding-top: 30px;
+	padding-top: 20px;
 }
 
 .note dt{
@@ -151,15 +151,17 @@ a:hover{
 	margin-left: 0px;
 }
 
-.note h2{
-	margin: 0px;
-	padding: 0px;
-}
-
 .note em{
 	font-size: 12px;
 	font-weight: 100;
 	color: #4A4A4A;
+}
+
+.actions{
+	font-size: 12px;
+	position: relative;
+	top: 50px;
+	display: block;
 }
 /*End styling of notes*/
 
