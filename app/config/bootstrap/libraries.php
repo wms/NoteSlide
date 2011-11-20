@@ -110,6 +110,7 @@ require LITHIUM_LIBRARY_PATH . '/lithium/storage/cache/adapter/Apc.php';
  * generally should not need to override any settings.
  */
 Libraries::add('lithium');
+Libraries::add('li3_flash_message');
 
 /**
  * Add the application.  You can pass a `'path'` key here if this bootstrap file is outside of
