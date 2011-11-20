@@ -1,4 +1,4 @@
-all: update_submodules
+all: update_submodules permissions
 
 update_submodules:
 	@@if [ -d .git ]; then \
@@ -8,3 +8,6 @@ update_submodules:
 			git submodule update --init --recursive --merge; \
 		fi; \
 	fi;
+
+permissions:
+	chmod -R 0777 app/resources
