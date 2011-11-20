@@ -3,7 +3,7 @@
 use lithium\net\http\Router;
 use lithium\core\Environment;
 
-Router::connect('/', 'Posts::index');
+Router::connect('/', 'Notes::index');
 
 if (!Environment::is('production')) {
 	Router::connect('/test/{:args}', array('controller' => 'lithium\test\Controller'));

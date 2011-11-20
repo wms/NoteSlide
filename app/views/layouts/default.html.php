@@ -24,6 +24,7 @@
 			</h2>
 		</div>
 		<div id="content">
+            <?php echo $this->html->link('New Note', array('controller' => 'notes', 'action' => 'add')) ?>
 			<?php echo $this->content(); ?>
 		</div>
 	</div>
