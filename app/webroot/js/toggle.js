@@ -5,3 +5,7 @@ function toggleLocations(){
 function toggleGroups(){
 	$('#groups').slideToggle();
 }
+
+function note(noteid){
+	$("#"+noteid).text("noted!");
+}

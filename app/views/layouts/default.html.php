@@ -38,7 +38,7 @@
         <div class="subcontainer">
 		<div class="content">
 		<div class="sidebar">
-			<div class="toptear"></div>
+			<div class="toptear"><?php echo $this->html->image("pin.png", array("class"=>"pin")); ?></div>
 			<div class="sidebarcontent">
 				<ul id="postselector">
 					<li id="listall">List All</li>
