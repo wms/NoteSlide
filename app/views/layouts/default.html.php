@@ -49,9 +49,7 @@
                             <?php echo $this->html->link($group->title, array(
                                 'controller' => 'notes',
                                 'action' => 'index',
-                                'args' => array(
-                                    'group' => $group->name
-                                )
+                                'group' => $group->name
                             )) ?>
                         </li>
                     <?php endforeach ?>
