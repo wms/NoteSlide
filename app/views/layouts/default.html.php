@@ -26,10 +26,14 @@
 				</div>
 			</div>
 	<div class="subcontainer">
-	<div id="sidebar"><h3>Choose your Uni</h3><ul><li>Cardiff Univesity</li><li>Bangor University</li></div>	
-	<div class="content">
-	<h1>Welcome to NoteSlide</h1>
-	</div>
+		<div class="content">
+		<h1>Welcome to NoteSlide</h1>
+		<h3>Choose your Uni to Browse notes, or Register to add notes</h3>
+			<ul class="unilist">
+				<li><a href="#">Cardiff University</a></li>
+				<li><a href="#">Swansea University</a></li>
+			</ul>
+		</div>
 	</div>
 </body>
 </html>
