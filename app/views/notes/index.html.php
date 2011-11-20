@@ -1,10 +1,10 @@
-<h2>Displaying all Notes</h2>
+<div class="beforenotes"><h2>Displaying all Notes</h2>
 <?php if($currentUser): ?>
 <?php echo $this->html->link('Create a Note', array('controller' => 'notes', 'action' => 'add')) ?>
 <?php else: ?>
 <p><em>Register to create Notes</em></p>
 <?php endif ?>
-<hr />
+</div>
 <?php if(count($notes)): ?>
 <?php $i = 1;?>
 <?php foreach($notes as $note): ?>

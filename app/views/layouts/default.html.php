@@ -26,14 +26,15 @@
 
             	<?php endif ?>
 			</span>
-           <span id="search"><form method="POST" name="searchform" id="topsearchform"><input name="search" id="topsearchbox" /></form></span>
+           <!--<span id="search"><form method="POST" name="searchform" id="topsearchform"><input name="search" id="topsearchbox" /></form></span>-->
             <div id="loginarea">
                 <?php if($currentUser): ?>
-                 <?php echo $this->html->link('Logout', array(
+                <?php echo $currentUser['name'] ?>
+                 <?php echo "(".$this->html->link('Logout', array(
                     'controller' => 'users',
                     'action' => 'logout'
-                )) ?>
-                <?php echo $currentUser['name'] ?>
+                )).")" ?>
+                
                 <?php else: ?>
                 <a href="#" id="loginlink">Login or Register<?php echo $this->html->image("drop.png"); ?></a>
                 <?php endif ?>
@@ -48,15 +49,9 @@
 					<li id="listall">List All</li>
 					<li id="bygroup"><a href="#" onClick="toggleGroups()">By Group</a></li>
 					<ul id="groups">
-                    <?php foreach($groups as $group): ?>
-                        <li>
-                            <?php echo $this->html->link($group->title, array(
-                                'controller' => 'notes',
-                                'action' => 'index',
-                                'group' => $group->name
-                            )) ?>
-                        </li>
-                    <?php endforeach ?>
+						<li id="g1">Group 1</li>
+						<li id="g2">Group 2</li>
+						<li id="g3">Group 3</li>
 					</ul>
 					<li id="bylocation"><a href="#"  onclick="toggleLocations()">By Location</a></li>
 					<ul id="locations">
