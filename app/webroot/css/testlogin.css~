@@ -1,0 +1,62 @@
+#form {
+height: 23px;
+width: 200px;
+
+-moz-border-radius-bottomright: 25px 50px;
+border-bottom-right-radius: 25px 50px;
+}
+
+#formloginfail {
+height: 30px;
+width: 200px;
+border-color: red;
+-moz-border-radius-bottomright: 25px 50px;
+border-bottom-right-radius: 25px 50px;
+}
+
+#form1 {
+border-radius: 7px;
+-moz-border-radius: 7px;
+}
+
+#loginbox {
+/* height: 40%;
+width: 30%;
+z-index: 100;
+padding-top: 10px;
+margin-top: 50px
+margin-left: 30%;
+margin-right: 30%;
+background: #000;
+visibility: hidden;
+position:absolute; */
+display:none;  
+position:fixed;  
+_position:absolute;
+height:384px;  
+width:408px;  
+background:#FFFFFF;  
+border:2px solid #cecece;  
+z-index:2;  
+padding:12px;  
+font-size:13px;  
+}
+
+#loginlink{  
+text-align:center;  
+margin:100px; 
+ 
+}  
+
+#overlay{  
+display:none;  
+position:fixed;  
+_position:absolute; 
+height:100%;  
+width:100%;  
+top:0;  
+left:0;  
+background:#000000;  
+border:1px solid #cecece;  
+z-index:1;  
+}  
