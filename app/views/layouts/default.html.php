@@ -22,9 +22,18 @@
                 <?php echo $this->html->image('ns.png'); ?>
             </span>
             <span id="search"><form method="POST" name="searchform" id="topsearchform"><input name="search" id="topsearchbox" /></form></span>
-            <span id="loginarea">
-					<a href="user/useridorname">FIRSTNAME LASTNAME</a> <a href="#" id="loginlink">Login</a>
-            </span>
+            <div id="loginarea">
+                <?php if($currentUser): ?>
+                <?php echo $currentUser['name'] ?>
+                <?php echo $this->html->link('Logout', array(
+                    'controller' => 'users',
+                    'action' => 'logout'
+                )) ?>
+                <a href="#" id="noteboxlink">Create Note</a>
+                <?php else: ?>
+                <a href="#" id="loginlink">Login or Register<?php echo $this->html->image("drop.png"); ?></a>
+                <?php endif ?>
+            </div>
         </div>
         <div class="subcontainer">
 		<div class="content">
@@ -47,7 +56,7 @@
 						<li id="l2">Location 2</li>
 						<li id="l3">Location 3</li>
 					</ul>
-					
+
 				</ul>
 			</div>
 			<div class="bottomtear"></div>
@@ -57,12 +66,50 @@
 				<?php echo $this->content(); ?>
 		</div>
 	</div>
+    <div id="notebox">
+        <a id="noteboxClose">x</a>
+        <div id="loginheader">Create Post </div>
+        <div id="noteboxspace">
+            <form>
+                <label>Title: </label>
+                <input type="text" style="width: 100%" class="form1" name="title"/><br />
+                Category: <select name="category" style="height: 30px">
+                <option value="Computer Science">Computer Science</option>
+                <option value="Chemistry">Chemistry </option>
+                </select> <br/>
+                Content: <br/>
+                <textarea rows="11" class="textarea"  name="content">
+                Enter note here...
+                </textarea>
 
-<div id="loginbox">  
-        <a id="loginboxClose">x</a>  
-       
-      
-    </div>  
-    <div id="overlay"></div> 
+                <input type="submit" style="float: right"class="submitbutton" value="Submit"  />
+            </form>
+        </div>
+    </div>
+    <?php if(!$currentUser): ?>
+    <div id="loginbox">
+        <a id="loginboxClose">x</a>
+        <div id="loginheader">Login</div>
+        <div id="loginspace">
+            <?php echo $this->form->create(null, array(
+                'url' => array(
+                    'controller' => 'users',
+                    'action' => 'login'
+                )
+            )) ?>
+            <?php echo $this->form->field('email') ?>
+            <?php echo $this->form->field('password', array(
+                'type' => 'password'
+            )) ?>
+            <?php echo $this->form->submit('Login') ?>
+            or <?php echo $this->html->link('Sign up!', array(
+                'controller' => 'users',
+                'action' => 'signup'
+            )) ?>
+            <?php echo $this->form->end() ?>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <?php endif ?>
 </body>
 </html>

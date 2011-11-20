@@ -1,10 +1,14 @@
-#form {
-height: 23px;
-width: 200px;
-
--moz-border-radius-bottomright: 25px 50px;
-border-bottom-right-radius: 25px 50px;
+#loginbox form {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    height: 26px;
+    margin-bottom: 10px;
 }
+
+#noteboxspace {
+    margin-top: 1%;
+}
+
 
 #formloginfail {
 height: 30px;
@@ -14,40 +18,113 @@ border-color: red;
 border-bottom-right-radius: 25px 50px;
 }
 
-#form1 {
-border-radius: 7px;
--moz-border-radius: 7px;
+#loginbox input[type=password],
+#loginbox input[type=text] {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    width: 280px;
+    height: 26px;
+    margin-bottom: 10px;
+}
+
+
+#loginbox input[type="submit"] {
+    width: auto;
+    height: auto;
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-transition: all 0.1s linear 0s;
+    background-color: #E6E6E6;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #FFFFFF 25%, #E6E6E6);
+    background-repeat: no-repeat;
+    border-color: #CCCCCC #CCCCCC #BBBBBB;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: normal;
+    padding: 5px 14px 6px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+#loginspace {
+margin-top: 4%;
+}
+
+#loginform fieldset{
+border: 0;
 }
 
 #loginbox {
-/* height: 40%;
-width: 30%;
-z-index: 100;
-padding-top: 10px;
-margin-top: 50px
-margin-left: 30%;
-margin-right: 30%;
-background: #000;
-visibility: hidden;
-position:absolute; */
+border-radius: 4px;
+-moz-border-radius: 4px;
 display:none;  
 position:fixed;  
 _position:absolute;
-height:384px;  
+height:190px;  
 width:408px;  
 background:#FFFFFF;  
 border:2px solid #cecece;  
 z-index:2;  
 padding:12px;  
-font-size:13px;  
+font-size:17px;
+color: #383838;
+}
+
+.submitbutton {
+    width: auto;
+    height: auto;
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-transition: all 0.1s linear 0s;
+    background-color: #E6E6E6;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #FFFFFF 25%, #E6E6E6);
+    background-repeat: no-repeat;
+    border-color: #CCCCCC #CCCCCC #BBBBBB;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: normal;
+    padding: 5px 14px 6px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+form label {
+	width: 7em;
+	display: inline-block;
 }
 
 #loginlink{  
 text-align:center;  
 
- 
 }  
+#loginboxClose {
+cursor: pointer;
+float: right;
+}
 
+
+#loginheader{
+font-size: 18px;
+color: #1B59E0;
+border-bottom: 1px solid #BABABA;
+
+}
 #overlay{  
 display:none;  
 position:fixed;  
@@ -60,3 +137,36 @@ background:#000000;
 border:1px solid #cecece;  
 z-index:1;  
 }  
+
+#noteboxlink {
+text-align: center;
+}
+
+#noteboxClose {
+cursor: pointer;
+float: right;
+}
+
+.textarea {
+height: auto;
+width: 100%;
+font-family: ubuntu;
+
+}
+
+
+#notebox {
+border-radius: 4px;
+-moz-border-radius: 4px;
+display:none;  
+position:fixed;  
+_position:absolute;
+height:400px;  
+width:60%;  
+background:#FFFFFF;  
+border:2px solid #cecece;  
+z-index:3;  
+padding:12px;  
+font-size:17px;
+color: #383838;
+}
