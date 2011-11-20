@@ -2,12 +2,31 @@
 
 namespace app\controllers;
 use app\models\Note;
+use app\models\Group;
 use li3_flash_message\extensions\storage\FlashMessage;
 
 class NotesController extends AppController {
 
 	public function index() {
-        $notes = Note::all();
+
+        if(isset($this->request->params['group'])) {
+            $group = Group::first(array(
+                'conditions' => array(
+                    'name' => $this->request->params['group']
+                )
+            ));
+            $this->set(compact('group'));
+
+            $notes = Note::all(array(
+                'conditions' => array(
+                    'group' => $this->request->params['group']
+                )
+            ));
+        }
+        else {
+            $notes = Note::all();
+        }
+
         return compact('notes');
 	}
 

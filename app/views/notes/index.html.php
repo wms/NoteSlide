@@ -1,4 +1,8 @@
+<?php if(isset($group)): ?>
+<h2>Displaying all Notes in group '<?php echo $group->title ?>'</h2>
+<?php else: ?>
 <h2>Displaying all Notes</h2>
+<?php endif ?>
 <?php if($currentUser): ?>
 <?php echo $this->html->link('Create a Note', array('controller' => 'notes', 'action' => 'add')) ?>
 <?php else: ?>
