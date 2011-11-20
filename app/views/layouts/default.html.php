@@ -16,6 +16,7 @@
 	<?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>
 </head>
 <body class="app">
+ <div id="overlay"></div>
 	<div id="container">
         <div class="topmenu">
             <div id="ns">
@@ -29,6 +30,7 @@
                     'action' => 'logout'
                 )) ?>
                 <a href="#" id="noteboxlink">Create Note</a>
+ <a href="#" id="editprofilelink">Edit Profile</a>
                 <?php else: ?>
                 <a href="#" id="loginlink">Login or Register<?php echo $this->html->image("drop.png"); ?></a>
                 <?php endif ?>
@@ -47,6 +49,25 @@
 			<?php echo $this->content(); ?>
 		</div>
 	</div>
+ 
+<div id="editprofile">
+ <a id="editprofileClose" style="float: right">x</a>
+<div id="loginheader">Edit your Profile</div>
+<div id="editprofilespace">
+<form>
+<label>Username: </label>
+<input type="text" style="width: 100%" class="form1" name="username"/><br />
+Email:
+<input type="text" style="width: 100%" class="form1" name="username"/><br />
+University:
+<input type="text" style="width: 100%" class="form1" name="university"/><br />
+Password:
+<input type="password" style="width: 100%" class="form1" name="university"/><br />
+Confirm Password:
+<input type="password" style="width: 100%" class="form1" name="university"/><br />
+ <input type="submit" style="float: right"class="submitbutton" value="Submit"  />
+</form>
+</div></div>
     <div id="notebox">
         <a id="noteboxClose">x</a>
         <div id="loginheader">Create Post </div>
@@ -59,9 +80,7 @@
                 <option value="Chemistry">Chemistry </option>
                 </select> <br/>
                 Content: <br/>
-                <textarea rows="11" class="textarea"  name="content">
-                Enter note here...
-                </textarea>
+                <textarea rows="11" class="textarea"  name="content">Enter note here...</textarea>
 
                 <input type="submit" style="float: right"class="submitbutton" value="Submit"  />
             </form>
@@ -90,7 +109,7 @@
             <?php echo $this->form->end() ?>
         </div>
     </div>
-    <div id="overlay"></div>
+  
     <?php endif ?>
 </body>
 </html>

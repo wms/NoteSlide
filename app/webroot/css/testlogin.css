@@ -5,18 +5,28 @@
     margin-bottom: 10px;
 }
 
+#notebox form {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    height: 26px;
+    margin-bottom: 10px;
+}
+
+#editprofile form {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    height: 26px;
+    margin-bottom: 10px;
+}
+
 #noteboxspace {
     margin-top: 1%;
 }
 
-
-#formloginfail {
-height: 30px;
-width: 200px;
-border-color: red;
--moz-border-radius-bottomright: 25px 50px;
-border-bottom-right-radius: 25px 50px;
+#editprofilespace {
+margin-top: 2%;
 }
+
 
 #loginbox input[type=password],
 #loginbox input[type=text] {
@@ -27,8 +37,79 @@ border-bottom-right-radius: 25px 50px;
     margin-bottom: 10px;
 }
 
+#notebox input[type=password],
+#notebox input[type=text] {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    width: 280px;
+    height: 26px;
+    margin-bottom: 10px;
+}
+
+#editprofile input[type=password],
+#editprofile input[type=text] {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    width: 280px;
+    height: 26px;
+    margin-bottom: 10px;
+}
+
+
 
 #loginbox input[type="submit"] {
+    width: auto;
+    height: auto;
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-transition: all 0.1s linear 0s;
+    background-color: #E6E6E6;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #FFFFFF 25%, #E6E6E6);
+    background-repeat: no-repeat;
+    border-color: #CCCCCC #CCCCCC #BBBBBB;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: normal;
+    padding: 5px 14px 6px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+#notebox input[type="submit"] {
+    width: auto;
+    height: auto;
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-transition: all 0.1s linear 0s;
+    background-color: #E6E6E6;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #FFFFFF 25%, #E6E6E6);
+    background-repeat: no-repeat;
+    border-color: #CCCCCC #CCCCCC #BBBBBB;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: normal;
+    padding: 5px 14px 6px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+#editprofile input[type="submit"] {
     width: auto;
     height: auto;
     -moz-border-bottom-colors: none;
@@ -58,9 +139,7 @@ border-bottom-right-radius: 25px 50px;
 margin-top: 4%;
 }
 
-#loginform fieldset{
-border: 0;
-}
+
 
 #loginbox {
 border-radius: 4px;
@@ -78,31 +157,7 @@ font-size:17px;
 color: #383838;
 }
 
-.submitbutton {
-    width: auto;
-    height: auto;
-    -moz-border-bottom-colors: none;
-    -moz-border-image: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    -moz-transition: all 0.1s linear 0s;
-    background-color: #E6E6E6;
-    background-image: -moz-linear-gradient(center top , #FFFFFF, #FFFFFF 25%, #E6E6E6);
-    background-repeat: no-repeat;
-    border-color: #CCCCCC #CCCCCC #BBBBBB;
-    border-radius: 4px 4px 4px 4px;
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
-    color: #333333;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 13px;
-    line-height: normal;
-    padding: 5px 14px 6px;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-}
+
 
 form label {
 	width: 7em;
@@ -169,4 +224,21 @@ z-index:3;
 padding:12px;  
 font-size:17px;
 color: #383838;
+}
+
+#editprofile {
+border-radius: 4px;
+-moz-border-radius: 4px;
+display:none;  
+position:fixed;  
+_position:absolute;
+height:365px;  
+width:30%;  
+background:#FFFFFF;  
+border:2px solid #cecece;  
+z-index:3;  
+padding:12px;  
+font-size:17px;
+color: #383838;
+
 }

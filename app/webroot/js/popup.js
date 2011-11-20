@@ -1,6 +1,6 @@
 var loginStatus = 0;
 var noteboxStatus = 0;
-
+var editProfileStatus = 0;
 $(function() {
 	var loadLogin = function loadLogin(){
 		if(loginStatus==0){
@@ -24,6 +24,16 @@ $(function() {
 		}
 	}
 
+	var loadEditProfile = function loadEditProfile(){
+		if(editProfileStatus==0){
+			$("#overlay").css({
+				"opacity": "0.7"
+			});
+			$("#overlay").fadeIn("slow");
+			$("#editprofile").fadeIn("slow");
+			editProfileStatus = 1;
+		}
+	}
 function disableLogin(){
 
 if(loginStatus==1){
@@ -42,6 +52,14 @@ noteboxStatus = 0;
 }
 }
 
+function disableEditProfile(){
+
+if(editProfileStatus==1){
+$("#overlay").fadeOut("slow");
+$("#editprofile").fadeOut("slow");
+editProfileStatus = 0;
+}
+}
 
 
 function centerLogin(){
@@ -85,6 +103,27 @@ console.debug('foo');
 }
 
 
+function centerEditProfile(){
+
+var windowWidth = document.documentElement.clientWidth;
+var windowHeight = document.documentElement.clientHeight;
+var editprofileHeight = $("#editprofile").height();
+var editprofileWidth = $("#editprofile").width();
+
+$("#editprofile").css({
+"position": "absolute",
+"top": windowHeight/2-editprofileHeight/2,
+"left": windowWidth/2-editprofileWidth/2
+});
+
+
+$("#overlay").css({
+"height": windowHeight
+});
+console.debug('foo');
+}
+
+
 $(document).ready(function(){
 
 });
@@ -104,6 +143,13 @@ centerNotebox();
 loadnotebox();
 });
 
+$("#editprofilelink").click(function(){
+
+centerEditProfile();
+
+loadEditProfile();
+});
+
 
 $("#loginboxClose").click(function(){
 disableLogin();
@@ -113,9 +159,15 @@ $("#noteboxClose").click(function(){
 disableNotebox();
 });
 
+$("#editprofileClose").click(function(){
+disableEditProfile();
+});
+
+
 $("#overlay").click(function(){
 disableLogin();
 disableNotebox();
+disableEditProfile();
 });
 
 
