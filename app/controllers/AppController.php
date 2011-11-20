@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 use \lithium\storage\Session;
+use app\models\Group;
 
 class AppController extends \lithium\action\Controller {
     public function _init() {
@@ -13,6 +14,8 @@ class AppController extends \lithium\action\Controller {
         else {
             $this->set(array('currentUser' => null));
         }
+        $groups = Group::all();
+        $this->set(compact('groups'));
     }
 }
 

@@ -48,9 +48,15 @@
 					<li id="listall">List All</li>
 					<li id="bygroup"><a href="#" onClick="toggleGroups()">By Group</a></li>
 					<ul id="groups">
-						<li id="g1">Group 1</li>
-						<li id="g2">Group 2</li>
-						<li id="g3">Group 3</li>
+                    <?php foreach($groups as $group): ?>
+                        <li>
+                            <?php echo $this->html->link($group->title, array(
+                                'controller' => 'notes',
+                                'action' => 'index',
+                                'group' => $group->name
+                            )) ?>
+                        </li>
+                    <?php endforeach ?>
 					</ul>
 					<li id="bylocation"><a href="#"  onclick="toggleLocations()">By Location</a></li>
 					<ul id="locations">

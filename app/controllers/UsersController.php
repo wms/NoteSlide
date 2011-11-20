@@ -10,9 +10,9 @@ class UsersController extends AppController {
     public function login() {
         if($this->request->data && $this->user = Auth::check('user', $this->request)) {
             FlashMessage::write('You are now logged in!');
-            return $this->redirect('/');
         }
         FlashMessage::write('There was an error logging in.');
+        return $this->redirect('/');
     }
 
     public function logout() {

@@ -1,4 +1,4 @@
-all: update_submodules permissions
+all: update_submodules permissions create_groups
 
 update_submodules:
 	@@if [ -d .git ]; then \
@@ -10,4 +10,8 @@ update_submodules:
 	fi;
 
 permissions:
-	chmod -R 0777 app/resources
+	-chmod -R 0777 app/resources
+
+
+create_groups:
+	libraries/lithium/console/li3 create-groups
