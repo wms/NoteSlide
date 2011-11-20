@@ -11,8 +11,8 @@
 <head>
 	<?php echo $this->html->charset();?>
 	<title>Application &gt; <?php echo $this->title(); ?></title>
-	<?php echo $this->html->style(array('debug', 'lithium')); ?>
 	<?php echo $this->html->script(array('foo')); ?>
+	<?php echo $this->html->style(array('debug', 'lithium', 'noteslide')); ?>
 	<?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>
 </head>
 <body class="app">
