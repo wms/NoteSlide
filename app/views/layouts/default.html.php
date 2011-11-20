@@ -41,9 +41,18 @@
 
 <div id="loginbox">  
         <a id="loginboxClose">x</a>  
-       
+       <div id="loginheader">Login </div>
+<div id="loginspace"><form>
+<label>Username: </label>
+<input type="text" class="form1" name="username" style="text-align: center"/><br />
+<label>Password: </label>
+<input type="password" class="form1" name="password" style="text-align: center"/> <br> <br>
+<a href="#">Forgot your password?</a>  |  <a href="#">Sign up!</a>
+<input type="submit" style="float: right"class="submitbutton" value="Submit"  />
+
+</form> </div>
       
-    </div>  
+     </div>  
     <div id="overlay"></div> 
 </body>
 </html>
