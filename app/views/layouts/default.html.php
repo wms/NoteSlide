@@ -17,20 +17,26 @@
 </head>
 <body class="app">
 	<div id="container">
-			<div class="topmenu">
-				<div id="ns">
-					<?php echo $this->html->image('ns.png'); ?>
-				</div>
-				<div id="loginarea">
+        <div class="topmenu">
+            <div id="ns">
+                <?php echo $this->html->image('ns.png'); ?>
+            </div>
+            <div id="loginarea">
 					FIRSTNAME LASTNAME <a href="#" id="loginlink">Login<a/>  <a href="#"><?php echo $this->html->image("drop.png"); ?></a>
-				</div>
-			</div>
-	<div class="subcontainer">
-	<div id="sidebar"><h3>Choose your Uni</h3><ul><li>Cardiff Univesity</li><li>Bangor University</li></div>	
-	<div class="content">
-	<h1>Welcome to NoteSlide</h1>
- 
-	</div>
+            </div>
+        </div>
+        <div class="subcontainer">
+            <div class="content">
+            <h1>Welcome to NoteSlide</h1>
+            <h3>Choose your Uni to Browse notes, or Register to add notes</h3>
+            <ul class="unilist">
+                <li><a href="#">Cardiff University</a></li>
+                <li><a href="#">Swansea University</a></li>
+            </ul>
+		<div id="content">
+            <?php echo $this->flashMessage->output() ?>
+			<?php echo $this->content(); ?>
+		</div>
 	</div>
 
 <div id="loginbox">  

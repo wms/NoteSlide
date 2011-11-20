@@ -12,11 +12,30 @@ body{
 	font-family: 'Ubuntu';
 }
 
+a{
+	color: #383838;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
 #ns{
 	margin-left: 10px;
 	margin-top: 8px;
 	display: inline;
 	float: left;
+}
+
+.unilist{
+	list-style: none;
+	padding-left: 0;
+	font-size: 24px;
+}
+
+.unilist li{
+	margin-top: 3px;
 }
 
 #loginarea{
@@ -44,6 +63,7 @@ body{
 
 .content{
 	min-height: 500px;
+	padding: 5px;
 }
 
 h1{
