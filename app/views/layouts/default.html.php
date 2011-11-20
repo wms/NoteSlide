@@ -22,7 +22,7 @@
                 <?php echo $this->html->image('ns.png'); ?>
             </div>
             <div id="loginarea">
-					FIRSTNAME LASTNAME <a href="#" id="loginlink">Login<a/>  <a href="#"><?php echo $this->html->image("drop.png"); ?></a>
+					FIRSTNAME LASTNAME <a href="#" id="loginlink">Login<a/> <a href="#" id="noteboxlink">Create Note<a/> <a href="#"><?php echo $this->html->image("drop.png"); ?></a>
             </div>
         </div>
         <div class="subcontainer">
@@ -38,7 +38,26 @@
 			<?php echo $this->content(); ?>
 		</div>
 	</div>
+<div id="notebox">
 
+  <a id="noteboxClose">x</a>  
+       <div id="loginheader">Create Post </div>
+<div id="noteboxspace"><form>
+<label>Title: </label>
+<input type="text" style="width: 100%" class="form1" name="title"/><br />
+Category: <select name="category" style="height: 30px">
+<option value="Computer Science">Computer Science</option>
+<option value="Chemistry">Chemistry </option>
+</select> <br/>
+Content: <br/>
+<textarea rows="11" class="textarea"  name="content">
+Enter note here...
+</textarea> 
+
+<input type="submit" style="float: right"class="submitbutton" value="Submit"  />
+
+</form> </div>
+</div>
 <div id="loginbox">  
         <a id="loginboxClose">x</a>  
        <div id="loginheader">Login </div>
@@ -47,7 +66,7 @@
 <input type="text" class="form1" name="username" style="text-align: center"/><br />
 <label>Password: </label>
 <input type="password" class="form1" name="password" style="text-align: center"/> <br> <br>
-<a href="#">Forgot your password?</a>  |  <a href="#">Sign up!</a>
+<a href="#">Forgot your password?</a>  |  <a href="#">Sign up!</a> <br/>
 <input type="submit" style="float: right"class="submitbutton" value="Submit"  />
 
 </form> </div>

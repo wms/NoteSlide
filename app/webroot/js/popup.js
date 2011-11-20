@@ -1,41 +1,60 @@
-var popupStatus = 0;
+var loginStatus = 0;
+var noteboxStatus = 0;
 
 $(function() {
-var loadPopup = function loadPopup(){
+	var loadLogin = function loadLogin(){
+		if(loginStatus==0){
+			$("#overlay").css({
+				"opacity": "0.7"
+			});
+			$("#overlay").fadeIn("slow");
+			$("#loginbox").fadeIn("slow");
+			loginStatus = 1;
+		}
+	}
 
-if(popupStatus==0){
-$("#overlay").css({
-"opacity": "0.7"
-});
-$("#overlay").fadeIn("slow");
-$("#loginbox").fadeIn("slow");
-popupStatus = 1;
-}
-}
+	var loadnotebox = function loadnotebox(){
+		if(noteboxStatus==0){
+			$("#overlay").css({
+				"opacity": "0.7"
+			});
+			$("#overlay").fadeIn("slow");
+			$("#notebox").fadeIn("slow");
+			noteboxStatus = 1;
+		}
+	}
 
+function disableLogin(){
 
-function disablePopup(){
-
-if(popupStatus==1){
+if(loginStatus==1){
 $("#overlay").fadeOut("slow");
 $("#loginbox").fadeOut("slow");
-popupStatus = 0;
+loginStatus = 0;
+}
+}
+
+function disableNotebox(){
+
+if(noteboxStatus==1){
+$("#overlay").fadeOut("slow");
+$("#notebox").fadeOut("slow");
+noteboxStatus = 0;
 }
 }
 
 
 
-function centerPopup(){
+function centerLogin(){
 
 var windowWidth = document.documentElement.clientWidth;
 var windowHeight = document.documentElement.clientHeight;
-var popupHeight = $("#loginbox").height();
-var popupWidth = $("#loginbox").width();
+var loginHeight = $("#loginbox").height();
+var loginWidth = $("#loginbox").width();
 
 $("#loginbox").css({
 "position": "absolute",
-"top": windowHeight/2-popupHeight/2,
-"left": windowWidth/2-popupWidth/2
+"top": windowHeight/2-loginHeight/2,
+"left": windowWidth/2-loginWidth/2
 });
 
 
@@ -43,6 +62,26 @@ $("#overlay").css({
 "height": windowHeight
 });
 
+}
+
+function centerNotebox(){
+
+var windowWidth = document.documentElement.clientWidth;
+var windowHeight = document.documentElement.clientHeight;
+var noteboxHeight = $("#notebox").height();
+var noteboxWidth = $("#notebox").width();
+
+$("#notebox").css({
+"position": "absolute",
+"top": windowHeight/2-noteboxHeight/2,
+"left": windowWidth/2-noteboxWidth/2
+});
+
+
+$("#overlay").css({
+"height": windowHeight
+});
+console.debug('foo');
 }
 
 
@@ -53,18 +92,30 @@ $(document).ready(function(){
 
 $("#loginlink").click(function(){
 
-centerPopup();
+centerLogin();
 
-loadPopup();
+loadLogin();
+});
+
+$("#noteboxlink").click(function(){
+
+centerNotebox();
+
+loadnotebox();
 });
 
 
 $("#loginboxClose").click(function(){
-disablePopup();
+disableLogin();
+});
+
+$("#noteboxClose").click(function(){
+disableNotebox();
 });
 
 $("#overlay").click(function(){
-disablePopup();
+disableLogin();
+disableNotebox();
 });
 
 
