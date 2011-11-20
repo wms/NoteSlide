@@ -3,9 +3,10 @@
 <hr />
 <?php if(count($notes)): ?>
 <?php foreach($notes as $note): ?>
-    <h3><?php echo $note->title ?></h3>
-    <p><em>Posted by <?php echo $note->name ?></em></p>
-    <p><?php echo $note->description ?></p>
+	<dl class="note" id="<?php #note id to be echoed here ?>">
+    <dt><a href="#"><?php echo $note->title ?></a><br /><em>Posted By <a href="user/usernameorid"><?php echo $note->name ?></a></em></dt>
+    <dd><?php echo $note->description ?></dd>
+    </dl>
 <?php endforeach ?>
 <?php else: ?>
 <p>There are no notes that match your criteria...</p>

@@ -18,12 +18,12 @@
 <body class="app">
 	<div id="container">
         <div class="topmenu">
-            <div id="ns">
+            <span id="ns">
                 <?php echo $this->html->image('ns.png'); ?>
-            </div>
-            <div id="loginarea">
-					FIRSTNAME LASTNAME <a href="#" id="loginlink">Login<a/>  <a href="#"><?php echo $this->html->image("drop.png"); ?></a>
-            </div>
+            </span>
+            <span id="loginarea">
+					<a href="user/useridorname">FIRSTNAME LASTNAME</a> <a href="#" id="loginlink">Login</a>  <a href="#"><?php echo $this->html->image("drop.png"); ?></a>
+            </span>
         </div>
         <div class="subcontainer">
             <div class="content">
