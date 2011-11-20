@@ -23,6 +23,10 @@ a:hover{
 	background-image: url("../img/topmenubg.png");
 	padding-left: 15%;
 	padding-right: 15%;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
 }
 
 .topmenu a{
@@ -112,6 +116,7 @@ a:hover{
 .content{
 	min-height: 500px;
 	padding: 5px;
+	margin-top: 50px;
 	margin-bottom: 100px;
 }
 
@@ -119,7 +124,7 @@ a:hover{
 .note{
 	background-image:url('../img/postitbg.png');
 	width: 875px;
-	height: 220px;
+	height: 175px;
 	padding-left: 25px;
 	padding-top: 30px;
 }

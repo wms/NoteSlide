@@ -11,7 +11,7 @@
 <head>
 	<?php echo $this->html->charset();?>
 	<title>Application &gt; <?php echo $this->title(); ?></title>
-	<?php echo $this->html->script(array('jquery-1.7', 'popup')); ?>
+	<?php echo $this->html->script(array('jquery-1.7', 'popup', 'togglefunctions')); ?>
 	<?php echo $this->html->style(array('noteslide','testlogin', 'fonts')); ?>
 	<?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>
 </head>
@@ -33,10 +33,22 @@
 			<div class="introtext">
 				<h1>Welcome to NoteSlide</h1>
 				<h3>Choose your Uni to Browse notes, or Register to add notes</h3>
-					<ul class="unilist">
-						<li><a href="#">Cardiff University</a></li>
-						<li><a href="#">Swansea University</a></li>
+				<ul id="postselector">
+					<li id="listall">List All</li>
+					<li id="bygroup"><a href="#" onClick="toggleGroups()">By Group</a></li>
+					<ul id="groups">
+						<li id="g1">Group 1</li>
+						<li id="g2">Group 2</li>
+						<li id="g3">Group 3</li>
 					</ul>
+					<li id="bylocation" onclick="toggleLocations()">By Location</li>
+					<ul id="locations">
+						<li id="l1">Location 1</li>
+						<li id="l2">Location 2</li>
+						<li id="l3">Location 3</li>
+					</ul>
+					
+				</ul>
 			</div>
 			<div class="bottomtear"></div>
 		</div>
