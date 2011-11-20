@@ -11,6 +11,20 @@ a{
 	text-decoration: none;
 }
 
+.beforenotes h2{
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+.beforenotes{
+	padding: 8px;
+	background-color: #C9C9C9;
+	border: solid 2px #575757;
+	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
 a:hover{
 	text-decoration: underline;
 }
