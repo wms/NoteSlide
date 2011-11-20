@@ -1,0 +1,52 @@
+.topmenu{
+	height: 50px;
+	background-image: url("../img/topmenubg.png");
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+	background-image:url("../img/cork.gif");
+	font-family: 'Ubuntu';
+}
+
+#ns{
+	margin-left: 10px;
+	margin-top: 8px;
+	display: inline;
+	float: left;
+}
+
+#loginarea{
+	float: right;
+	padding-right: 5px;
+	margin-top: 15px;
+	color: #FFFFFF;
+	font-family: 'Ubuntu';
+}
+
+#sidebar{
+	float: right;
+	width: 250px;
+	background-color: #00FF00;
+	height: auto;
+}
+
+.subcontainer{
+	background-color: #EEEEEE;
+	margin-left: 15%;
+	margin-right: 15%;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.content{
+	min-height: 500px;
+}
+
+h1{
+	margin-top: 0px;
+	padding: 6px 0px 0px 6px;
+}
