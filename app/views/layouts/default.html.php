@@ -11,21 +11,25 @@
 <head>
 	<?php echo $this->html->charset();?>
 	<title>Application &gt; <?php echo $this->title(); ?></title>
-	<?php echo $this->html->script(array('foo')); ?>
-	<?php echo $this->html->style(array('debug', 'lithium', 'noteslide')); ?>
+	<?php echo $this->html->script(array('jquery-1.7')); ?>
+	<?php echo $this->html->style(array('noteslide', 'fonts')); ?>
 	<?php echo $this->html->link('Icon', null, array('type' => 'icon')); ?>
 </head>
 <body class="app">
 	<div id="container">
-		<div id="header">
-			<h1>Application</h1>
-			<h2>
-				Powered by <?php echo $this->html->link('Lithium', 'http://lithify.me/'); ?>.
-			</h2>
-		</div>
-		<div id="content">
-			<?php echo $this->content(); ?>
-		</div>
+			<div class="topmenu">
+				<div id="ns">
+					<?php echo $this->html->image('ns.png'); ?>
+				</div>
+				<div id="loginarea">
+					FIRSTNAME LASTNAME <a href="#"><?php echo $this->html->image("drop.png"); ?></a>
+				</div>
+			</div>
+	<div class="subcontainer">
+	<div id="sidebar"><h3>Choose your Uni</h3><ul><li>Cardiff Univesity</li><li>Bangor University</li></div>	
+	<div class="content">
+	<h1>Welcome to NoteSlide</h1>
+	</div>
 	</div>
 </body>
 </html>
