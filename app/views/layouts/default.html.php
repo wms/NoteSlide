@@ -22,7 +22,12 @@
                 <?php echo $this->html->image('ns.png'); ?>
             </div>
             <div id="loginarea">
-					FIRSTNAME LASTNAME <a href="#" id="loginlink">Login<a/>  <a href="#"><?php echo $this->html->image("drop.png"); ?></a>
+                <?php if($currentUser): ?>
+                <?php echo $currentUser->forename ?>
+                <?php echo $currentUser->surname ?>
+                <?php else: ?>
+                <a href="#" id="loginlink">Login or Register<?php echo $this->html->image("drop.png"); ?></a>
+                <?php endif ?>
             </div>
         </div>
         <div class="subcontainer">
