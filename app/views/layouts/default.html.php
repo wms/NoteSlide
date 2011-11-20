@@ -21,15 +21,19 @@
             <span id="ns">
                 <?php echo $this->html->image('ns.png'); ?>
             </span>
-            <span id="search"><form method="POST" name="searchform" id="topsearchform"><input name="search" id="topsearchbox" /></form></span>
+            <span id="addpost"><?php if($currentUser):?>
+            <a href="#" id="noteboxlink">Create Note</a>
+
+            	<?php endif ?>
+			</span>
+           <span id="search"><form method="POST" name="searchform" id="topsearchform"><input name="search" id="topsearchbox" /></form></span>
             <div id="loginarea">
                 <?php if($currentUser): ?>
-                <?php echo $currentUser['name'] ?>
-                <?php echo $this->html->link('Logout', array(
+                 <?php echo $this->html->link('Logout', array(
                     'controller' => 'users',
                     'action' => 'logout'
                 )) ?>
-                <a href="#" id="noteboxlink">Create Note</a>
+                <?php echo $currentUser['name'] ?>
                 <?php else: ?>
                 <a href="#" id="loginlink">Login or Register<?php echo $this->html->image("drop.png"); ?></a>
                 <?php endif ?>

@@ -48,6 +48,13 @@ a:hover{
 	float: left;
 }
 
+#addpost{
+	margin-top: 15px;
+	display: inline;
+	width: 100px;
+	float: left;
+	margin-left: 30px;
+}
 
 #loginarea{
 	float: right;
