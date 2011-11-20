@@ -16,13 +16,21 @@ a:hover{
 }
 /*End general styling*/
 
+/*Start note finder list stylings*/
+#locations{
+	display:none;
+}
+
+#groups{
+	display:none;
+}
 
 /*Start top menu bar styling*/
 .topmenu{
 	height: 50px;
 	background-image: url("../img/topmenubg.png");
-	padding-left: 15%;
-	padding-right: 15%;
+	padding-left: 10%;
+	padding-right: 10%;
 	position:fixed;
 	top:0;
 	left:0;
@@ -82,14 +90,14 @@ a:hover{
 
 
 .subcontainer{
-	margin-left: 15%;
-	margin-right: 15%;
+	margin-left: 10%;
+	margin-right: 10%;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
-
-.intro{
-	/*box-shadow: 10px 10px 5px #E8E8E8;*/
+.sidebar{
+	width: 200px;
+	float: left;
 }
 
 .toptear{
@@ -99,7 +107,7 @@ a:hover{
 	background-image:url("../img/toptear.png");
 }
 
-.introtext{
+.sidebarcontent{
 	padding: 5px;
 	background-image:url("../img/justlines.png");
 	min-height: 200px
@@ -118,6 +126,11 @@ a:hover{
 	padding: 5px;
 	margin-top: 50px;
 	margin-bottom: 100px;
+}
+
+/*Start styling of notes*/
+.notes{
+	margin-left: 225px;
 }
 
 /*Start Styling of notes*/
