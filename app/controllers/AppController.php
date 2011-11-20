@@ -1,13 +1,13 @@
 <?php
 
 namespace app\controllers;
-use \lithium\security\Auth;
+use \lithium\storage\Session;
 
 class AppController extends \lithium\action\Controller {
     public function _init() {
         parent::_init();
 
-        if($this->user = Auth::check('user')) {
+        if($this->user = Session::read('user')) {
             $this->set(array('currentUser' => $this->user));
         }
         else {

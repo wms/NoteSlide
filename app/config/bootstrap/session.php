@@ -22,8 +22,8 @@ use lithium\security\Auth;
 Auth::config(array(
 	'user' => array(
 		'adapter' => 'Form',
-		'model' => 'Users',
-		'fields' => array('username', 'password')
+		'model' => 'User',
+		'fields' => array('email', 'password')
 	)
 ));
 

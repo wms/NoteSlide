@@ -23,8 +23,11 @@
             </div>
             <div id="loginarea">
                 <?php if($currentUser): ?>
-                <?php echo $currentUser->forename ?>
-                <?php echo $currentUser->surname ?>
+                <?php echo $currentUser['name'] ?>
+                <?php echo $this->html->link('Logout', array(
+                    'controller' => 'users',
+                    'action' => 'logout'
+                )) ?>
                 <?php else: ?>
                 <a href="#" id="loginlink">Login or Register<?php echo $this->html->image("drop.png"); ?></a>
                 <?php endif ?>
@@ -44,20 +47,30 @@
 		</div>
 	</div>
 
-<div id="loginbox">  
-        <a id="loginboxClose">x</a>  
-       <div id="loginheader">Login </div>
-<div id="loginspace"><form>
-<label>Username: </label>
-<input type="text" class="form1" name="username" style="text-align: center"/><br />
-<label>Password: </label>
-<input type="password" class="form1" name="password" style="text-align: center"/> <br> <br>
-<a href="#">Forgot your password?</a>  |  <a href="#">Sign up!</a>
-<input type="submit" style="float: right"class="submitbutton" value="Submit"  />
-
-</form> </div>
-      
-     </div>  
-    <div id="overlay"></div> 
+    <?php if(!$currentUser): ?>
+    <div id="loginbox">
+        <a id="loginboxClose">x</a>
+        <div id="loginheader">Login</div>
+        <div id="loginspace">
+            <?php echo $this->form->create(null, array(
+                'url' => array(
+                    'controller' => 'users',
+                    'action' => 'login'
+                )
+            )) ?>
+            <?php echo $this->form->field('email') ?>
+            <?php echo $this->form->field('password', array(
+                'type' => 'password'
+            )) ?>
+            <?php echo $this->form->submit('Login') ?>
+            or <?php echo $this->html->link('Sign up!', array(
+                'controller' => 'users',
+                'action' => 'signup'
+            )) ?>
+            <?php echo $this->form->end() ?>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <?php endif ?>
 </body>
 </html>
