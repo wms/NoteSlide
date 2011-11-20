@@ -4,7 +4,7 @@ namespace app\controllers;
 use app\models\Note;
 use li3_flash_message\extensions\storage\FlashMessage;
 
-class NotesController extends \lithium\action\Controller {
+class NotesController extends AppController {
 
 	public function index() {
         $notes = Note::all();
